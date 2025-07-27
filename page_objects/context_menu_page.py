@@ -18,10 +18,6 @@ class ContextMenuPage(BasePage):
     def open(self):
         super().open_url(self.__url)
 
-    @property
-    def current_url(self) -> str:
-        return super()._driver.current_url
-
     def context_menu_page_loaded_successfully(self):
         assert super().is_displayed(self.__page_header), "The header is not displayed"
 

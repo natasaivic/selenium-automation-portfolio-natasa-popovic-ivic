@@ -11,9 +11,5 @@ class AbTestingPage(BasePage):
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
 
-    @property
-    def current_url(self) -> str:
-        return super()._driver.current_url
-
     def ab_landing_page_loaded_successfully(self):
         assert super().is_displayed(self.__ab_test_header), "The header is not displayed"
